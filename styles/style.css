@@ -32,6 +32,10 @@ body {
   content: "*";
 }
 
+.title:hover {
+  color: #4D4B4E;
+}
+
 .title:hover::before {
   content: 'На самом деле нет.\AВажнее &mdash; научиться ошибаться.';
   white-space: pre;
@@ -48,11 +52,11 @@ body {
   box-shadow: 0 14px 0 0 #000;
   display: block;
   position: absolute;
-  transform: translate(54%, 80%);
-  color: #4D4B4E;
+  transform: translate(0, 80%);
 }
 
-.overlay {
+body::before {
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -63,7 +67,7 @@ body {
   z-index: 1;
 }
 
-body:hover .overlay {
+body:hover::before {
   display: block;
 }
 
